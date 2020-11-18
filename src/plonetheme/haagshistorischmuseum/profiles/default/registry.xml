@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<registry>
+    <records prefix="plone.resources/intkwebsite"
+              interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+       <value key="js">++theme++plonetheme.intkwebsite/js/bundle.js</value>
+       <value key="css">
+            <element>++theme++plonetheme.intkwebsite/css/main.less</element>
+       </value>
+    </records>
+
+    <!-- bundle definition -->
+    <records prefix="plone.bundles/intkwebsite-bundle"
+              interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="merge_with"></value>
+      
+      <value key="resources">
+        <element>intkwebsite</element>
+      </value>
+
+      <value key="jscompilation">++theme++plonetheme.intkwebsite/js/intkwebsite-bundle-compiled.js</value>
+      <value key="csscompilation">++theme++plonetheme.intkwebsite/css/intkwebsite-bundle-compiled.css</value>
+      <value key="last_compilation">2015-02-16 00:00:00</value>
+
+      <value key="enabled">True</value>
+      <value key="compile">True</value>
+    </records>
+    
+</registry>
