@@ -1,4 +1,4 @@
 Contributors
 ============
 
-- Andre Goncalves, andre@intk.com
+- Andre Goncalves, andre@Haagshistorischmuseum.com

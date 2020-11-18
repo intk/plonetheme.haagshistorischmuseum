@@ -24,8 +24,8 @@ Source Code and Contribution
 ============================
 
 Source-Code
-    at the `Plone code repository hosted at Github <https://github.com/intk/plonetheme.haagshistorischmuseum>`_.
+    at the `Plone code repository hosted at Github <https://github.com/Haagshistorischmuseum/plonetheme.haagshistorischmuseum>`_.
 
 Issues
-    Please use the `Issue-Tracker <https://github.com/intk/plonetheme.haagshistorischmuseum/issues>`_
+    Please use the `Issue-Tracker <https://github.com/Haagshistorischmuseum/plonetheme.haagshistorischmuseum/issues>`_
 
