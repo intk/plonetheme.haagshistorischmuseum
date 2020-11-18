@@ -4,11 +4,11 @@
     xmlns:faceted="http://namespaces.zope.org/faceted"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="plonetheme.intkwebsite">
+    i18n_domain="plonetheme.haagshistorischmuseum">
 
   <!-- Publish static files -->
   <browser:resourceDirectory
-      name="plonetheme.intkwebsite"
+      name="plonetheme.haagshistorischmuseum"
       directory="static"
       />
 

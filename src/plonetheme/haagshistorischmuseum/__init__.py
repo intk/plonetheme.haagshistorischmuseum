@@ -3,4 +3,4 @@
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('plonetheme.intkwebsite')
+_ = MessageFactory('plonetheme.haagshistorischmuseum')

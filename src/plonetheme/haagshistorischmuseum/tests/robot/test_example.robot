@@ -4,17 +4,17 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s plonetheme.intkwebsite -t test_example.robot --all
+#  $ bin/test -s plonetheme.haagshistorischmuseum -t test_example.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src plonetheme.intkwebsite.testing.plonetheme.intkwebsite_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src plonetheme.haagshistorischmuseum.testing.plonetheme.haagshistorischmuseum_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #
-# $ bin/robot src/plonetheme.intkwebsite/tests/robot/test_example.robot
+# $ bin/robot src/plonetheme.haagshistorischmuseum/tests/robot/test_example.robot
 #
 # See the http://docs.plone.org for further details (search for robot
 # framework).

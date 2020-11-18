@@ -9,7 +9,7 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller"""
         return [
-            'plonetheme.intkwebsite:uninstall',
+            'plonetheme.haagshistorischmuseum:uninstall',
         ]
 
 

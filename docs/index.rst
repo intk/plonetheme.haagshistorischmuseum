@@ -1,5 +1,5 @@
 ====================
-plonetheme.intkwebsite
+plonetheme.haagshistorischmuseum
 ====================
 
 User documentation

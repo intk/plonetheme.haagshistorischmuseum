@@ -7,7 +7,7 @@ from plone.theme.interfaces import IDefaultPloneLayer
 class IPlonethemeModernBaseLayer(IDefaultPloneLayer):
     """Marker interface that defines a browser layer."""
 
-class IintkwebsiteSpecific(IDefaultPloneLayer):
+class IhaagshistorischmuseumSpecific(IDefaultPloneLayer):
 	"""Marker interface that defines a Zope 3 browser layer.
 	"""
 	

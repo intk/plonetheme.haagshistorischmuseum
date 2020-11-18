@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the plonetheme.intkwebsite package."""
+"""Installer for the plonetheme.haagshistorischmuseum package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='plonetheme.intkwebsite',
+    name='plonetheme.haagshistorischmuseum',
     version='0.1',
     description="An installable theme for Plone 5 based on plonetheme.barceloneta and compatible with Python 3",
     long_description=long_description,
@@ -36,7 +36,7 @@ setup(
     keywords='Python Plone',
     author='Andre Goncalves',
     author_email='andre@intk.com',
-    url='https://github.com/intk/plonetheme.intkwebsite',
+    url='https://github.com/intk/plonetheme.haagshistorischmuseum',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['plonetheme'],
