@@ -42,12 +42,11 @@ function load_videos() {
 	if (video_wrapper.length) {
 		jQuery('.video-wrapper-link').on('click', function() {
 			video_wrapper.html('<iframe allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper_link.data('yt-video') + '" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>');
-			
 		});
 	}
 }
 
-function load_carousel() {
+/*function load_carousel() {
 	require(['jquery', 'collective-slick-js'], function($) {
 	 	if ($(".slick-carousel:not(.slick-initialized)").length && typeof($(".slick-carousel").slick) !== "undefined") {
 	    	$(".slick-carousel").slick({
@@ -56,11 +55,11 @@ function load_carousel() {
 	    	});
 	  	}
   	});
-}
+}*/
 
 jQuery(document).ready(function () {
 	/* Carousel */
-	load_carousel();
+	/*load_carousel();*/
 	
 	/* Menu */
 	load_menu();

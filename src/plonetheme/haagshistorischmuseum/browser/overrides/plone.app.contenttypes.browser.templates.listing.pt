@@ -26,7 +26,8 @@
                          thumb_scale_summary view/get_thumb_scale_summary;
                          img_class python:'thumb-%s pull-right' % thumb_scale_list;
                          showicons view/show_icons;
-                         showabout view/show_about;">
+                         showabout view/show_about;
+                         context_tools python: context.restrictedTraverse('@@context_tools');">
 
       <tal:listing condition="batch">
         <div class="entries" metal:define-slot="entries"
@@ -39,7 +40,7 @@
                 item_id item/getId;
                 item_title item/Title;
                 item_title python:item_title or item_id;
-                item_description item/Description;
+                item_description python:context_tools.trimText(item.Description(), 160);
                 item_type item/PortalType;
                 item_modified item/ModificationDate;
                 item_created item/CreationDate;

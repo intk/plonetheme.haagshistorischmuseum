@@ -53,4 +53,13 @@
         template="templates/testimonials_view.pt"
     />
 
+    <browser:page
+        name="context_tools"
+        for="*"
+        class=".views.ContextToolsView"
+        permission="zope2.View"
+    />
+
+    
+
 </configure>
