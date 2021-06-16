@@ -2,7 +2,7 @@
 
 .links() {
     a {
-        color: @theme-text-color;
+        color: @theme-color-orange;
         text-decoration: none;
 
         &:hover,
@@ -15,18 +15,51 @@
 
 .layout() {
 
+    .visible-xs, .visible-sm, .visible-md, .visible-lg {
+        display: none !important;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .visible-sm {
+            display: block !important;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .visible-md {
+            display: block !important;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .visible-lg {
+            display: block !important;
+        }
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: " ";
+    }
+
+    .clearfix:after {
+        clear:both;
+    }
     /* Body text */
     p {
         .Lato();
-        font-size: 1.250em;
+        font-size: 21px;
         line-height: @theme-line-height-text;
         color: @theme-description-color;
         margin: 0 0 @theme-text-margin;
     }
 
     .discreet {
-        font-size: 0.750em;
+        font-size: 14px;
         color: @theme-text-color;
+        opacity: 0.4;
+        line-height: 18px;
     }
 
     /* Headings */
@@ -36,20 +69,20 @@
         line-height: @theme-headings-line-height;
         color: @theme-headings-color;
         letter-spacing: @theme-headings-letter-spacing;
-        text-transform: uppercase;
+        text-transform: @theme-headings-text-transform;
     }
 
     h1, h2, h3 {
-        margin-top: @theme-line-height-computed;
-        margin-bottom: (@theme-line-height-computed / 2);
+        margin-top: @theme-headings-margin-top;
+        margin-bottom: @theme-headings-margin-bottom;
         a:hover, a:focus {
             text-decoration: none;
         }
     }
 
     h4, h5, h6 {
-        margin-top: (@theme-line-height-computed / 2);
-        margin-bottom: (@theme-line-height-computed / 2);
+        margin-top: @theme-headings-margin-top;
+        margin-bottom: @theme-headings-margin-bottom;
     }
 
     h1 { font-size: @theme-font-size-h1; };
@@ -75,33 +108,44 @@
 
     /* Blockquote */
     blockquote {
-        .Lato();
-        color: #666666;
+        .PlatinMTProBold();
+        color: @theme-color-orange;
 
         margin: 0 auto;
-        font-weight: @theme-font-weight-light;
+        font-weight: @theme-font-weight-regular;
         
-        font-size: 1.875em;
+        font-size: 32px;
         width: auto;
         float: left;
         background: none;
         
-        line-height: 45px;
+        line-height: 43px;
         
-        border-left: 2px solid #cccccc;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 0px;
+        border-left: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 35px;
         padding-bottom: 5px;
-        margin-bottom: 28px;
+        margin-bottom: 35px;
 
+        text-align: center;
         float: none;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.00em;
+
+        
+        p {
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+        }
     }
 
     /* Tables */
     table {
-        border: @theme-border-table;
+        background-color: transparent;
+        color: #000000;
+        border: 0px;
         margin-top: @theme-margin-bottom-table;
         margin-bottom: @theme-margin-bottom-table;
         font-size: @theme-font-size-table;
@@ -109,6 +153,9 @@
 
     table th {
         background-color: @theme-th-color-table;
+        color: #000000;
+        font-weight: 400;
+        .PlatinMTProBold();
     }
 
     table > thead > tr > th,
@@ -118,9 +165,21 @@
     table > tbody > tr > td,
     table > tfoot > tr > td {
         border: @theme-border-table;
-        padding: .75rem;
+        padding: 0px;
         font-family: inherit;
         font-size: inherit;
+        line-height: 34px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    table > thead > tr > th,
+    table > tbody > tr > th,
+    table > tfoot > tr > th {
+        .PlatinMTProBold();
     }
     
     table > thead > tr > th,
@@ -144,11 +203,10 @@
 
 
     #content-core {
-        max-width: 640px;
+        max-width: 744px;
         margin: 0 auto;
         margin-top: 30px;
     }
-
 }
 
 #portal-logo {
@@ -193,6 +251,10 @@ body#tinymce {
     /* Apply layout to tinymce - text editor */
     .layout();
     .links();
+
+    p img {
+        max-width: 90%;
+    }
 }
 
 .mosaic-rich-text {
@@ -205,6 +267,20 @@ body#tinymce {
     .layout();
     .links();
 }
+
+body.template-login {
+    div.main-container-wrapper {
+        margin-top: 100px;
+    }
+
+    .formControls {
+        box-shadow: none;
+        border-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+
 
 
 

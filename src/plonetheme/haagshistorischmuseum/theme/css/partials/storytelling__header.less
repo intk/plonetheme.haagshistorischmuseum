@@ -1,0 +1,47 @@
+
+
+body.frontend.template-layout:not(.section-frontpage) {
+	div.outer-wrapper {
+		#main-container {
+			
+			.mosaic-IDublinCore-title-tile {
+				position: absolute;
+				bottom: 8vw;
+				width: 100%;
+
+				h1 {
+					color: #ffffff;
+				}
+
+				@media(min-width: 992px) {
+					bottom: 100px;
+				}
+			}
+
+			.mosaic-ILeadImageBehavior-image_caption-tile {
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				color: #ffffff;
+				opacity: 0.8;
+				padding-right: 15px;
+				padding-left: 15px;
+				padding-bottom: 8px;
+				padding-top: 10px;
+				font-size: 15px;
+
+				@media(min-width: 992px) {
+					text-align: right;
+				}
+			}
+		}
+
+		@media(min-width: 992px) {
+			.mosaic-ILeadImageBehavior-image-tile {
+				max-height: 800px;
+				height: 80vh;
+			}
+		}
+	}
+}
+

@@ -1,5 +1,5 @@
 
-body.template-search #content-core {
+.searchItems() {
 	.search-result {
 		float: left;
 		padding-top: 15px;
@@ -25,9 +25,10 @@ body.template-search #content-core {
 	}
 	
 	.search-result-title {
-		.Lato();
+		.Montserrat();
 		font-size: 1.375em;
-		color: #6a216c;
+		line-height: 36px;
+		color: #000000;
 		font-weight: 400s;
 		border-bottom: 0px;
 		text-decoration: none;
@@ -36,15 +37,15 @@ body.template-search #content-core {
 		&:focus,
 		&:active,
 		&:active:focus {
-			color: #6a216c;
+			color: #000000;
 			text-decoration: underline;
 		}
 	}
 
 	.search-item-title {
-		.Lato();
+		.Montserrat();
 		font-size: 1.375em;
-		color: #6a216c;
+		color: #000000;
 		font-weight: 400s;
 		border-bottom: 0px;
 		text-decoration: none;
@@ -52,11 +53,24 @@ body.template-search #content-core {
 
 	.search-result-description {
 		.Lato();
-		color: @theme-listing-description-color;
-		font-size: @theme-listing-description-font-size;
-		line-height: @theme-listing-description-line-height;
-		margin-top: @theme-listing-description-margin-top;
+		color: #000000;
+		font-size: 21px;
+		line-height: 34px;
+		margin-top: 0px;
 		margin-bottom: @theme-listing-description-margin-bottom;
-	}
 
+		opacity: 1;
+	}
+}
+
+body.template-search #main-container #content-core {
+	.searchItems();
+}
+
+nav.pagination ul {
+	.Montserrat();
+
+	a {
+		.Montserrat();
+	}
 }

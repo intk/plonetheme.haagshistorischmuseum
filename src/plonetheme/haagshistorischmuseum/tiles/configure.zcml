@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="plonetheme.haagshistorischmuseum">
+
+    <include package="plone.tiles" />
+    <include package="plone.app.tiles" />
+
+    <plone:tile
+        name="plonetheme.haagshistorischmuseum.tiles.frontpage"
+        title="Frontpage item"
+        description="A tile which displays a content object"
+        add_permission="cmf.ModifyPortalContent"
+        class=".frontpage.FrontpageTile"
+        for="*"
+        permission="zope.Public"
+        schema=".frontpage.IFrontpageTile"
+        template="frontpage.pt"
+        />
+
+    <utility
+        component="plonetheme.haagshistorischmuseum.tiles.frontpage.availableFrontpageViewsVocabulary"
+        name="Available Frontpage Views"
+        />
+
+</configure>
