@@ -14,6 +14,12 @@
 		color: @theme-menu-a-color;
 		padding: 11px 15px;
 
+
+		@media(max-width: 991px) {
+			font-size: 28px;
+			line-height: 1.14;
+		}
+
 		&:hover,
 		&:focus,
 		&:active {
@@ -46,6 +52,11 @@
 
 			font-size: 22px;
 			line-height: 1.2;
+
+			@media(max-width: 991px) {
+				font-size: 20px;
+				line-height: 1.1;
+			}
 		}
   	}
 }
@@ -65,7 +76,6 @@
 	.selected > a:focus {
 		background-color: transparent;
 		color: #000000;
-		border-bottom: 2px solid #000000;
 	}
 }
 
@@ -93,6 +103,10 @@
 #portal-globalnav > li > a {
 	margin-top: 25px;
 	margin-bottom: 35px;
+
+	@media(max-width: 991px) {
+		margin-bottom: 0px;
+	}
 }
 
 @media (min-width: 768px) {
@@ -146,7 +160,7 @@
 
 		@media(max-width: 991px) {
 			top: 110px;
-			left: 80px;
+			left: 65px;
 			right: auto;
 		}
 
