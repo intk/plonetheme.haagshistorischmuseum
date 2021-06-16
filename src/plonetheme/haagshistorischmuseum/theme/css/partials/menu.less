@@ -7,18 +7,22 @@
 	text-align: left;
 
 	a {
-		font-size: 37px;
+		font-size: 24px;
 		line-height: 1.2;
 		font-weight: 400;
 		text-transform: none;
 		color: @theme-menu-a-color;
-		padding: 12px 15px;
+		padding: 11px 15px;
 
 		&:hover,
 		&:focus,
 		&:active {
 			background-color: transparent;
-	    	color: @theme-menu-a-color-hover;
+	    	color: #000000;
+
+	    	span {
+	    		border-bottom: 3px solid #000000;
+	    	}
 		}
 	}
 
@@ -36,11 +40,12 @@
 		padding-left: 0px;
 
 		li a {
+			.LibreMedium();
 			background-color: transparent;
 			text-transform: none;
 
-			font-size: 20px;
-			line-height: 1.4;
+			font-size: 22px;
+			line-height: 1.2;
 		}
   	}
 }
@@ -59,7 +64,8 @@
 	.current > a:focus, 
 	.selected > a:focus {
 		background-color: transparent;
-		color: @theme-menu-a-color-hover;
+		color: #000000;
+		border-bottom: 2px solid #000000;
 	}
 }
 
@@ -68,8 +74,8 @@
 	width: 100%;
 
 	@media (min-width: 991px) {
-		padding-left: 40px;
-		padding-right: 40px;
+		padding-left: 45px;
+		padding-right: 45px;
 	}
 }
 
@@ -86,7 +92,7 @@
 
 #portal-globalnav > li > a {
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
@@ -112,7 +118,7 @@
 #cd-nav {
 	div.tickets-button-wrapper {
 		position: absolute;
-	    right: 105px;
+	    right: 112px;
 	    top: 45px;
 	    z-index: 1;
 
@@ -136,7 +142,7 @@
 		position: absolute;
 		
 		top: 47px;
-		right: 235px;
+		right: 240px;
 
 		@media(max-width: 991px) {
 			top: 110px;
@@ -148,7 +154,7 @@
 			height: 50px;
 			font-size: 20px;
 			display: inline-block;
-			.Montserrat();
+			.LibreBold();
 			font-weight: 400;
 			border: none;
 			outline: none;
