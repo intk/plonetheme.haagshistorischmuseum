@@ -47,6 +47,11 @@
 
   <!-- header wrapper -->
 
+  <!-- Dates labels -->
+  <replace css:theme-children="#event-label" css:content-children="p#event-label" method="raw" css:if-content="body.portaltype-event" />
+  <drop css:content="p#event-label"/>
+  <drop css:theme="#event-label" css:if-not-content="body.portaltype-event"/>
+
   <!-- Above content title -->
   <replace css:theme="#header-wrapper .container.main #viewlet-above-content-title" css:content="#content > header #viewlet-above-content-title" method="raw" />
   <replace css:theme="#header-wrapper .container.main #viewlet-above-content-title" css:content="#viewlet-above-content-title" method="raw" css:if-content="body.portaltype-easyform" />
@@ -54,6 +59,8 @@
 
   <!-- Title -->
   <replace css:theme="#header-wrapper .container.main h1.documentFirstHeading" css:content="#content > header h1.documentFirstHeading" method="raw" />
+  
+
   <!-- Event summary -->
   <replace css:theme-children="#header-wrapper .container.main .event-summary" css:content="#content-core ul.event.summary" method="raw" />
   <!-- Description -->
@@ -75,6 +82,7 @@
   <drop css:content="div.mosaic-IDublinCore-description-tile .documentDescription" css:if-content="body.template-layout"/>-->
   <drop css:theme="#header-wrapper .container.main" css:if-content="body.template-layout"/>
   <drop css:theme="#header-wrapper .container.layout" css:if-content="body.template-search"/>
+
 
 
   <!-- Central column -->

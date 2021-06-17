@@ -14,6 +14,8 @@ from zope.contentprovider.interfaces import IContentProvider
 from plone.app.standardtiles.existingcontent import IExistingContentTile
 from plone.app.standardtiles.existingcontent import ExistingContentTile
 
+from plonetheme.haagshistorischmuseum.browser.views import get_event_date_state
+
 class IFrontpageTile(IExistingContentTile):
 
     show_text = schema.Bool(title=_(u"Show content text"), default=False)
@@ -74,6 +76,9 @@ class IFrontpageTile(IExistingContentTile):
 
 class FrontpageTile(ExistingContentTile):
 
+    def get_event_state(self, item):
+        return get_event_date_state(item)
+
     def formatted_date(self, item):
         date_provider = getMultiAdapter(
             (self.context, self.request, self),
@@ -94,3 +99,5 @@ def availableFrontpageViewsVocabulary(context):
     for key, label in sorted(frontpage_views.items(), key=itemgetter(1)):
         voc.append(SimpleVocabulary.createTerm(key, key, label))
     return SimpleVocabulary(voc)
+
+

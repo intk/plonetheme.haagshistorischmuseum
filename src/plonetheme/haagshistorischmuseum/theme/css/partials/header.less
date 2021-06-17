@@ -17,6 +17,27 @@
         }
     }
 
+    #event-label span {
+        .LibreSemiBold();
+        display: inline-block;
+        width: auto;
+        font-size: 22px;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #F58220;
+        color: #ffffff;
+
+        &.future {
+            background-color: #92278F;
+        }
+
+        &.current {
+            background-color: #00AEEF;
+        }
+    }
+
     @media (max-width: 991px) {
         #portal-logo {
             /*width: 40px;
@@ -111,11 +132,12 @@
         font-size: 33px;
         line-height: 1.5;
         color: @theme-description-color;
-        max-width: 824px;
+        max-width: 842px;
         padding-left: 40px;
         padding-right: 40px;
         margin: 0 auto;
         margin-bottom: 100px;
+        margin-top: 75px;
 
         @media (max-width: 991px) {
             padding-left: 20px;
@@ -124,6 +146,7 @@
             margin-bottom: 75px;
             line-height: 1.33;
             max-width: 750px;
+            margin-top: 50px;
         }
     }
 
@@ -485,15 +508,37 @@
 
     }
 
-    .documentFirstHeading {
+    #viewlet-above-content-title {
+        padding-bottom: 36px;
+
+        @media(max-width: 660px) {
+            padding-bottom: 65px;
+        }
+    }
+
+    .leadImage figcaption {
         position: absolute;
-        bottom: 95px;
+        bottom: -36px;
+        right: 0;
+
+        @media(max-width: 660px) {
+            bottom: -65px;
+        }
+    }
+
+    div.header-title-dates {
+        position: absolute;
+        bottom: 66px;
         left: 30px;
-        color: #ffffff;
 
-        @media(max-width: 991px) {
+        @media(max-width: 660px) {
             left: 0px;
+            bottom: 96px;
+        }
 
+        .documentFirstHeading {
+            color: #ffffff;
+            margin-top: 15px;
         }
     }
 
@@ -505,6 +550,38 @@
             margin-bottom: 75px;
         }
     }
+
+    #event-label {
+        padding-left: 43px;
+        padding-right: 40px;
+
+        @media(max-width: 991px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    } 
+
+    div.event-summary {
+        padding-left: 44px;
+        padding-right: 40px;
+
+        @media(max-width: 991px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        ul.event.summary {
+            text-align: left;
+            color: #ffffff;
+
+            li.event-date span {
+                .LibreMedium();
+                font-size: 21px;
+                line-height: 1.2;
+                color: #ffffff;
+            }
+        }
+    }
 }
 
 body.frontend div.outer-wrapper {
@@ -513,6 +590,10 @@ body.frontend div.outer-wrapper {
 
 body.frontend .website-wrapper:not(.no-image) div.outer-wrapper {
     .header_with_image();
+}
+
+body.frontend.portaltype-event .website-wrapper:not(.no-image) div.outer-wrapper {
+
 }
 
 body.frontend div.website-wrapper.no-image div.outer-wrapper {
