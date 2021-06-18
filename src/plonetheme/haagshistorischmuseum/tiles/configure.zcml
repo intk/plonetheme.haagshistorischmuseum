@@ -11,7 +11,7 @@
 
     <plone:tile
         name="plonetheme.haagshistorischmuseum.tiles.frontpage"
-        title="Frontpage item"
+        title="Frontpage item (fullscreen)"
         description="A tile which displays a content object"
         add_permission="cmf.ModifyPortalContent"
         class=".frontpage.FrontpageTile"
@@ -19,6 +19,18 @@
         permission="zope.Public"
         schema=".frontpage.IFrontpageTile"
         template="frontpage.pt"
+        />
+
+    <plone:tile
+        name="plonetheme.haagshistorischmuseum.tiles.frontpage_sidetext"
+        title="Frontpage item (side text)"
+        description="A tile which displays a content object with text on the side"
+        add_permission="cmf.ModifyPortalContent"
+        class=".frontpage.FrontpageSideTextTile"
+        for="*"
+        permission="zope.Public"
+        schema=".frontpage.IFrontpageSideTextTile"
+        template="frontpage_sidetext.pt"
         />
 
     <utility

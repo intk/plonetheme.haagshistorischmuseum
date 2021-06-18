@@ -33,7 +33,7 @@
           <div class="frontpage-tile-content">
             <div class="fontpage-tile-content-wrapper" tal:attributes="class python: 'fontpage-tile-content-wrapper' if not show_icon else 'fontpage-tile-content-wrapper show-icon'">
 
-              <div id="event-label" tal:define="event_state python:view.get_event_state(context)">
+              <div id="event-label" tal:define="event_state python:view.get_event_state(context)" tal:condition="item_is_event">
                 <span tal:attributes="class event_state"
                       tal:define="event_text python:'';
                                   event_text python:'Nu te zien' if event_state == 'current' else event_text;
