@@ -21,23 +21,11 @@
                       item_is_event python:portal_type in ['Event'];">
 
     
-          <div class="frontpage side-text-slide row align-${alignment}">
+          <div class="frontpage frontpage-box side-text-slide row align-${alignment}">
 
-            <div class="side-text-slide-wrapper col-xs-12"> 
+            <div class="side-text-slide-wrapper col-xs-12">
                 
-                <div class="side-text-image col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                    <tal:image condition="show_image">
-                      <div class="content-image"
-                           tal:define="image_tag view/image_tag">
-
-                        <a href="" tal:attributes="href context/absolute_url|nothing">
-                          <figure><img tal:replace="structure image_tag" /></figure>
-                        </a>
-                      </div>
-                    </tal:image>
-                </div>
-                
-                <div class="side-text-body col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="side-text-body col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="table-cell-wrapper">
                         <div class="body-table-cell">
                             <div id="event-label" tal:define="event_state python:view.get_event_state(context)" tal:condition="item_is_event">
@@ -72,9 +60,26 @@
                                   <tal:date tal:replace="structure python:view.formatted_date(context)"/>
                               </p>
                             </tal:event>
+
+                            <div class="more-link">
+                              <a href="" tal:attributes="href context/absolute_url|nothing">Bekijk meer</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="side-text-image col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <tal:image condition="show_image">
+                      <div class="content-image"
+                           tal:define="image_tag view/image_tag">
+
+                        <a href="" tal:attributes="href context/absolute_url|nothing">
+                          <figure><img tal:replace="structure image_tag" /></figure>
+                        </a>
+                      </div>
+                    </tal:image>
+                </div>
+
             </div>
           </div>
     </body>

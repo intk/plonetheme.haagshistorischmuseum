@@ -135,6 +135,66 @@ class IFrontpageSideTextTile(IExistingContentTile):
     form.omitted('show_comments')
     form.omitted('tile_class')
 
+class IFrontpageSideTextBoxTile(IExistingContentTile):
+
+    show_text = schema.Bool(title=_(u"Show content text"), default=False)
+
+    show_comments = schema.Bool(
+        title=_(u"Show content comments count (if enabled)"),
+        default=False,
+        required=False,
+    )
+
+    show_image = schema.Bool(
+        title=_(u"Show content image (if available)"),
+        default=True,
+        required=False,
+    )
+
+    image_scale = schema.Choice(
+        title=_(u"Image scale"),
+        vocabulary="plone.app.vocabularies.ImagesScales",
+        required=False,
+        default=u"large"
+    )
+
+    image_alignment = schema.Choice(
+        title=_(u"Choose image alignment"),
+        description=_(u"Image is aligned to the left by default"),
+        values=[_(u'Left'), _(u'Right')],
+        default=_(u'Left'),
+        required=False
+    )
+
+    tile_class = schema.TextLine(
+        title=_(u"Tile additional styles"),
+        description=_(
+            u"Insert a list of additional CSS classes that will"
+            + u" be added to the tile"
+        ),
+        default=u"",
+        required=False
+    )
+
+    description_alternative = schema.TextLine(
+        title=_(u"Replace the description with a custom text"),
+        description=_(
+            u"The item's description will be replaced with the text on this field"
+        ),
+        default=u"",
+        required=False
+    )
+
+    view_template = schema.Choice(
+        title=_(u'Display mode'),
+        source=_(u'Available Frontpage Views'),
+        required=True
+    )
+
+    form.omitted('show_text')
+    form.omitted('show_comments')
+    form.omitted('tile_class')
+
 class FrontpageTile(ExistingContentTile):
 
     def get_event_state(self, item):
@@ -148,6 +208,18 @@ class FrontpageTile(ExistingContentTile):
         return date_provider(item)
 
 class FrontpageSideTextTile(ExistingContentTile):
+
+    def get_event_state(self, item):
+        return get_event_date_state(item)
+
+    def formatted_date(self, item):
+        date_provider = getMultiAdapter(
+            (self.context, self.request, self),
+            IContentProvider, name='formatted_date'
+        )
+        return date_provider(item)
+
+class FrontpageSideTextBoxTile(ExistingContentTile):
 
     def get_event_state(self, item):
         return get_event_date_state(item)

@@ -33,6 +33,18 @@
         template="frontpage_sidetext.pt"
         />
 
+    <plone:tile
+        name="plonetheme.haagshistorischmuseum.tiles.frontpage_sidetext_box"
+        title="Frontpage item (side text box)"
+        description="A tile which displays a content object with text on the side"
+        add_permission="cmf.ModifyPortalContent"
+        class=".frontpage.FrontpageSideTextBoxTile"
+        for="*"
+        permission="zope.Public"
+        schema=".frontpage.IFrontpageSideTextBoxTile"
+        template="frontpage_sidetext_box.pt"
+        />
+
     <utility
         component="plonetheme.haagshistorischmuseum.tiles.frontpage.availableFrontpageViewsVocabulary"
         name="Available Frontpage Views"
