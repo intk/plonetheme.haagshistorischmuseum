@@ -35,19 +35,17 @@ body.template-edit.mosaic-layout-customized {
 		}
 
 		@media(min-width: 1440px) {
-			max-width: 1420px;
+			max-width: 100%;
 			margin: 0 auto;
 		}
 
-		&.Purple {
+		&.Purple,
+		&.Red {
 
 			@media(max-width: 991px) {
 				padding-bottom: 15px;
 				margin-top: 0px;
 			}
-
-			background-color: #92278F;
-
 
 			h2.tileHeader, div.entries .title-wrapper a span, div.entries .title-wrapper a, div.show_more_link a {
 				color: #ffffff !important;
@@ -80,11 +78,24 @@ body.template-edit.mosaic-layout-customized {
 				}
 			}
 		}
+
+		&.Purple {
+			background-color: #92278F;
+		}
+
+		&.Red {
+			background-color: #D2232A;
+		}
 	}
 
 	div[class~="mosaic-plonetheme.haagshistorischmuseum.tiles.multipleitems-tile"] .mosaic-tile-content {
 		padding-left: 15px;
 		padding-right: 15px;
+
+		@media(min-width: 1440px) {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
 	}
 }
 
