@@ -45,6 +45,30 @@
         template="frontpage_sidetext_box.pt"
         />
 
+    <plone:tile
+        name="plonetheme.haagshistorischmuseum.tiles.multipleitems"
+        title="Frontpage multiple items"
+        description='Display the results of a saved search of the site content'
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        class=".multipleitems.MultipleitemsTile"
+        schema=".multipleitems.IMultipleitemsTile"
+        for="*"
+        />
+
+    <utility
+        component="plonetheme.haagshistorischmuseum.tiles.multipleitems.availableListingViewsVocabulary"
+        name="Available Multiple items Views"
+        />
+
+    <browser:page
+        name="multipleitems_view"
+        for="*"
+        layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+        permission="zope2.View"
+        template="multipleitems_view.pt"
+        />
+
     <utility
         component="plonetheme.haagshistorischmuseum.tiles.frontpage.availableFrontpageViewsVocabulary"
         name="Available Frontpage Views"
