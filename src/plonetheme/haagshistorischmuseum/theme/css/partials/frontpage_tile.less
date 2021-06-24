@@ -187,6 +187,53 @@ body {
 			}
 		}
 	}
+
+
+	div.outer-wrapper div.newsletter-frontpage-wrapper {
+		background-color: #FFE600;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 95px;
+		padding-bottom: 65px;
+
+		@media(max-width: 991px) {
+			padding-top: 60px;
+			padding-bottom: 35px;
+		}
+
+		.newsletter-inner {
+			padding-left: 25px;
+			padding-right: 25px;
+			max-width: 744px;
+			margin: 0 auto;
+		}
+
+		p {
+
+			.LibreExtraBold();
+			font-size: 24px;
+			line-height: 1.5;
+
+			@media(max-width: 991px) {
+				font-size: 22px;
+				line-height: 1.636;
+			}
+		}
+
+		span.text-button a {
+			background-color: #92278F;
+			border: 1px solid #92278F !important;
+			color: #ffffff !important;
+
+			&:hover,
+			&:focus,
+			&:active:focus {
+				background-color: #000000;
+				color: #ffffff !important;
+				border: 1px solid #000000 !important;
+			}
+		}
+	}
 }
 
 body:not(.frontend).template-edit.mosaic-layout-customized div.outer-wrapper {
