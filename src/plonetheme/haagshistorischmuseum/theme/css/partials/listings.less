@@ -68,7 +68,7 @@
 		a {
 			.LibreExtraBold();
 			font-size: @theme-listing-title-font-size;
-			color: @theme-listing-title-color !important;
+			color: #000000 !important;
 			border-bottom: @theme-listing-title-border-bottom;
 			text-decoration: @theme-listing-title-text-decoration;
 			line-height: 1.5;
@@ -156,6 +156,12 @@
 			line-height: @theme-listing-description-line-height;
 			margin-top: @theme-listing-description-margin-top;
 			margin-bottom: @theme-listing-description-margin-bottom;
+
+			abbr {
+				border-bottom: 0px !important;
+				cursor: auto !important;
+				text-decoration: none !important;
+			}
 		}
 	}
 
@@ -198,8 +204,8 @@
 	}
 
 	.main-container-wrapper {
-		padding-left: 120px;
-		padding-right: 120px;
+		padding-left: 60px;
+		padding-right: 60px;
 
 		@media (max-width: 991px) {
 			padding-left: 15px;

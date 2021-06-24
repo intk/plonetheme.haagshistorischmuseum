@@ -97,10 +97,17 @@
 
                     <div class="description-wrapper">
                       <p class="description"
-                          tal:condition="item_description"
-                          tal:content="item_description">
-                        description
-                      </p>
+                                  tal:condition="item_description"
+                                  tal:content="item_description"
+                                  omit-tag="item_is_event" tal:condition="not:item_is_event">
+                                description
+                              </p>
+
+                              <p class="description"
+                                  tal:condition="item_description"
+                                  omit-tag="not:item_is_event" tal:condition="item_is_event">
+                                <tal:date tal:replace="structure python:view.formatted_date(obj)"/>
+                              </p>
                     </div>
 
                     
