@@ -64,7 +64,7 @@
         position: absolute;
         top: 48px;
         left: 20px;
-        z-index: 2;
+        z-index: 4;
 
         @media(max-width: 991px) {
             top: 18px;
@@ -520,10 +520,34 @@
         }
     }
 
+    .leadImage:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 70%;
+        background-image: url("/nl/intk/overlays/overlay-single-content.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+
+        @media(max-width: 991px) {
+            width: 90%;
+            height: 50%;
+        }
+    }
+
+    .leadImage {
+        z-index: 3;
+    }
+
     .leadImage figcaption {
         position: absolute;
         bottom: -36px;
         right: 0;
+        z-index: 3;
 
         @media(max-width: 660px) {
             bottom: -65px;
@@ -534,6 +558,7 @@
         position: absolute;
         bottom: 66px;
         left: 30px;
+        z-index: 4;
 
         @media(max-width: 660px) {
             left: 0px;
@@ -546,13 +571,41 @@
         }
     }
 
+    #header-wrapper .description-wrapper {
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 50%;
+            height: 50%;
+
+            background-image: url("/nl/intk/overlays/overlay-description.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media(max-width: 991px) {
+                top: -65px;
+                width: 90%;
+                height: 60%;
+            }
+        }
+    }
+
     .documentDescription {
         margin-top: 75px;
+        z-index: 2;
 
         @media(max-width: 991px) {
             margin-top: 50px;
             margin-bottom: 75px;
         }
+
+        
     }
 
     #event-label {
