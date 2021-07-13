@@ -28,6 +28,10 @@ body.template-edit.mosaic-layout-customized {
 		margin-bottom: 0px;
 		padding-bottom: 50px;
 
+		.entries .entry-item {
+			z-index: 2;
+		}
+
 		@media(max-width: 991px) {
 			margin-top: 65px;
 			padding-left: 10px;
@@ -41,6 +45,7 @@ body.template-edit.mosaic-layout-customized {
 
 		h2.tileHeader, div.entries .title-wrapper a span, div.entries .title-wrapper a, div.show_more_link a {
 			color: #000000 !important;
+			z-index: 2;
 		}
 
 		&.Purple,
@@ -76,7 +81,8 @@ body.template-edit.mosaic-layout-customized {
 
 			div.show_more_link {
 				margin-top: 105px;
-
+				z-index: 2;
+				
 				@media(max-width: 991px) {
 					margin-top: 70px;
 				}
@@ -85,10 +91,48 @@ body.template-edit.mosaic-layout-customized {
 
 		&.Purple {
 			background-color: #92278F;
-		}
+		}	
 
 		&.Red {
 			background-color: #D2232A;
+		}
+
+		
+	}
+
+	.multipleitems-overlay-wrapper {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -15px;
+			width: 50%;
+			height: 70%;
+			
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			z-index: 1;
+
+			@media(max-width: 991px) {
+				width: 90%;
+				height: 50%;
+			}
+		}
+
+		&.Purple:after {
+			background-image: url("/nl/intk/overlays/overlay-news.svg");
+
+			@media(max-width: 991px) {
+				left: auto;
+				right: -15px;
+			}
+		}
+
+		&.Red:after {
+			background-image: url("/nl/intk/overlays/overlay-verhalen.svg");
 		}
 	}
 

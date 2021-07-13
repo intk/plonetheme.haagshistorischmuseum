@@ -14,6 +14,27 @@ body {
     	position: relative;
     	overflow: hidden;
 
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 70%;
+			height: 70%;
+			background-image: url("/nl/intk/overlays/overlay-frontpage.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-blend-mode: multiply;
+			mix-blend-mode: multiply;
+	
+			@media(max-width: 991px) {
+				width: 100%;
+				height: 50%;
+			}
+		}
+
+
 		.landscape-item-link {
 			position: absolute;
 		    width: 100%;
@@ -31,6 +52,9 @@ body {
     			}
     		}
 		}
+
+
+		
 
 		div.content-image {
 			background-size: cover;
@@ -195,6 +219,28 @@ body {
 		padding-right: 0px;
 		padding-top: 95px;
 		padding-bottom: 65px;
+		position: relative;
+
+		&:after {
+			pointer-events: none;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 70%;
+			height: 70%;
+			background-image: url("/nl/intk/overlays/overlay-newsletter.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-blend-mode: multiply;
+			mix-blend-mode: multiply;
+	
+			@media(max-width: 991px) {
+				width: 100%;
+				height: 50%;
+			}
+		}
+
 
 		@media(max-width: 991px) {
 			padding-top: 60px;
