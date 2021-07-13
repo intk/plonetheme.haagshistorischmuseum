@@ -312,6 +312,32 @@ body:not(.navigation-is-open) .cd-nav-trigger-wrapper:hover .cd-nav-trigger span
 }
 
 
+div.cd-nav-tickets-button-wrapper,
+div.tickets-button-wrapper {
+  a.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -44px;
+    border-top: 53px solid transparent;
+    border-right: 44px solid #fce602;
+  }
+
+  a.btn:after {
+    display: none !important;
+  }
+
+  a {
+    &:hover,
+    &:focus,
+    &:active:focus {
+      &:before {
+        border-right: 44px solid #000000;
+      }
+    }
+  }
+}
+
 
 
 

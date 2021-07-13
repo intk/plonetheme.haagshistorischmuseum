@@ -81,7 +81,7 @@ body {
 
     			-o-object-fit: cover;
     			object-fit: cover;
-    			object-position: center bottom;
+    			object-position: center center;
     		}
 		}
 
@@ -271,12 +271,25 @@ body {
 			border: 1px solid #92278F !important;
 			color: #ffffff !important;
 
+			&:after {
+				top: -1px;
+				right: -47px;
+				border-left-color: #92278F !important;
+				border-bottom-width: 53px !important;
+			}
 			&:hover,
 			&:focus,
 			&:active:focus {
 				background-color: #000000;
 				color: #ffffff !important;
 				border: 1px solid #000000 !important;
+
+				&:after {
+					top: -1px;
+					right: -47px;
+					border-bottom-width: 53px !important;
+					border-left-color: #000000 !important;
+				}
 			}
 		}
 	}

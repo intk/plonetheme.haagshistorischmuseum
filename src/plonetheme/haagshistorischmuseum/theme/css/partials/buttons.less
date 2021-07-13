@@ -21,6 +21,15 @@
 		color: @theme-button-color;
 		line-height: @theme-button-line-height;
 		text-transform: @theme-button-text-transform;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: -1px;
+			right: -47px;
+			border-bottom: 53px solid transparent;
+			border-left: 46px solid @theme-button-background-color;
+		}
 		
 		&:hover,
 		&:focus,
@@ -29,6 +38,10 @@
 			background-color: @theme-button-hover-background-color;
 			border-color: @theme-button-hover-border-color;
 			color: @theme-button-hover-color;
+
+			&:after {
+				border-left: 46px solid @theme-button-hover-background-color;
+			}
 		}
 	}
 
@@ -183,6 +196,18 @@ body.template-edit.mosaic-layout-customized {
 	padding-right: 20px;
 	border: 1px solid @theme-button-background-color !important;
 
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1px;
+		right: -47px;
+		border-bottom: 53px solid transparent;
+		border-left: 46px solid @theme-button-background-color;
+	}
+
+
 	&:hover,
 	&:focus,
 	&:active,
@@ -190,6 +215,10 @@ body.template-edit.mosaic-layout-customized {
 		color: @theme-button-hover-color !important;
 		text-decoration: none !important;
 		border: 1px solid #000000 !important;
+
+		&:after {
+			border-left: 46px solid @theme-button-hover-background-color;
+		}
 	}
 
 	@media(max-width: 991px) {

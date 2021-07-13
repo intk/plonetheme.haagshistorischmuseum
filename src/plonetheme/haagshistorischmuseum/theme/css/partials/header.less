@@ -28,13 +28,32 @@
         padding-right: 20px;
         background-color: #F58220;
         color: #ffffff;
+        position: relative;
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -44px;
+            border-bottom: 50px solid transparent;
+            border-left: 44px solid #F58220;
+        }
 
         &.future {
             background-color: #92278F;
+
+            &:after {
+                border-left: 44px solid #92278F;
+            }
         }
 
         &.current {
             background-color: #00AEEF;
+
+            &:after {
+                border-left: 44px solid #00AEEF;
+            }
         }
     }
 
@@ -519,6 +538,8 @@
             padding-bottom: 65px;
         }
     }
+
+
 
     .leadImage:after {
         content: "";

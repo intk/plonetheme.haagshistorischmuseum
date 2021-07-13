@@ -39,6 +39,30 @@ body.frontend.template-layout:not(.section-frontpage) {
 			}
 		}
 
+		.mosaic-ILeadImageBehavior-image-tile {
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 70%;
+				height: 70%;
+				background-image: url("/nl/intk/overlays/overlay-frontpage.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-blend-mode: multiply;
+				mix-blend-mode: multiply;
+		
+				@media(max-width: 991px) {
+					width: 90%;
+					height: 50%;
+				}
+			}
+		
+		}
+
 		@media(min-width: 992px) {
 			.mosaic-ILeadImageBehavior-image-tile {
 				max-height: 800px;

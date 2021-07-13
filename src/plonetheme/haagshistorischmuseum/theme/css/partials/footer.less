@@ -142,12 +142,25 @@
 			height: auto !important;
 			min-height: 53px !important;
 
+			&:after {
+				top: -2px;
+				right: -48px;
+				border-bottom-width: 55px !important;
+				border-left-color: #00AEEF !important;
+			}
+
 			&:hover,
 			&:focus,
 			&:hover:focus {
 				background-color: #ffffff;
 				color: #000000 !important;
 				border: 2px solid #ffffff !important;
+
+				&:after {
+					top: -2px;
+					border-bottom-width: 55px !important;
+					border-left-color: #ffffff !important;
+				}
 			}
 		}
 
