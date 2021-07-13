@@ -129,7 +129,54 @@
 }
 
 /* Tickets button */
+
+body.is-mobile #cd-nav {
+	#portal-globalnav-wrapper {
+
+		&:before {
+			@media(max-width: 650px) {
+				height: 60.5vw;
+			}
+		}
+	}
+}
 #cd-nav {
+
+	#portal-globalnav-wrapper {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 50%;
+			height: 50%;
+			max-height: 430px;
+			max-width: 720px;
+
+			background-image: url("/nl/intk/overlays/overlay-menu.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+			background-position: bottom right;
+
+
+			@media(max-width: 650px) {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 59vw;
+				background-position: top left;
+
+				-moz-transform: scaleY(-1);
+				-o-transform: scaleY(-1);
+				-webkit-transform: scaleY(-1);
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+
 	div.tickets-button-wrapper {
 		position: absolute;
 	    right: 112px;
